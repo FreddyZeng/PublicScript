@@ -93,7 +93,7 @@ def query_hospital():
 	url = 'https://jmyy.wjj.foshan.gov.cn/mobile/outpatient/nearby'
 	payload = {
 	'pageNum': 1, 
-	'numPerPage': 45, 
+	'numPerPage': 0, # 标记为 0,获取所有医院信息
 	'areaId': '440600', 
 	'outpName': '', 
 	'outpMapLongitude': '', 
