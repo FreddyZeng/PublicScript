@@ -13,14 +13,10 @@ app.get('/',(req,res) => {
 	
 	res.header('Access-Control-Allow-Origin','*');
 	console.log(`domain: ${domain}`)
-	res.send('OK')
+	res.end('OK')
 	resolver.resolve4(domain, (err,address)=>{
-		//res.send(`${domain} address is ${address}` )
+		//res.end(`${domain} address is ${address}` )
 	})
-
-	//dns.lookup(domain, (err, address, family)=>{;
-	//	res.send(`hello world ${address}` )
-	//})
 })
 
 https.createServer({
